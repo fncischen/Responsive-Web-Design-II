@@ -1,1 +1,327 @@
-/* Use your CSS from RWD - I here.  IF you don't have CSS, use the solution CSS from RWD - I*/
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-size: 62.5%;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.001%;
+    margin-bottom: 2%;
+}
+
+p {
+    font-size: 1rem; 
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.container {
+	margin: 0 auto;
+	max-width: 880px;
+}
+
+a {
+	color: gray;
+	text-decoration: none;
+}
+
+.section {
+	display: flex; 
+}
+
+.section.top {
+	margin: 30px; 
+	justify-content: space-evenly;
+}
+
+.section.top nav {
+	order: 0;
+	align-self: flex-start;
+	position: relative;
+	top: 1%;
+}
+
+.section.top ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section.top ul li {
+    list-style-type: none; 
+    padding: 2% 4%;
+    font-size: 1.1rem; 
+}
+
+.section.main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+	border-bottom: 1px solid black;
+    padding-bottom: 3%;
+}
+
+.section.main .item.main {
+    width: 50%; 
+}
+
+.section.main .item.main.text {
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+}
+
+.section.main .item.main.text .text {
+    font-size: 5.2rem;
+    text-align: center; 
+    width: 65%;
+}
+
+
+.section.main .border {
+	background-color: white;
+	border: 1px solid black;
+    text-align: center;
+    font-size: 1rem;
+    
+	padding: 2.02%;
+	width: 50%;
+}
+
+.section.description {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+
+	border-bottom: 1px solid black;
+	padding-bottom: 1%;
+}
+
+.section.description .item h3 {
+    font-size: 1.2rem;
+}
+
+.section.description .item.mainpage {
+    height: auto;
+	padding: 2%;
+    background-color: white; 
+    margin-top: 1%;
+    margin-bottom: 1%; 
+} 
+
+.section.description .item.mainpage.row1 {
+    width: 44%;
+}
+
+.section.description .item.mainpage.row2 {
+    width: 33%;
+}
+
+.section.bottom {
+margin-top: 1%;
+flex-wrap: wrap;
+flex-direction: column;
+}
+
+.section.bottom .item.bottom {
+	width: 45%;
+	margin: 1.5%;
+}
+
+.section.bottom .item.mainbottom h3 {
+    font-size: 1.2rem;
+}
+
+.section.bottom .item.mainbottom {
+	margin-left: 1%; 
+}
+
+footer {
+	margin: 10px;
+	text-align: center;
+	align-self: center;
+	margin-left: 40%;
+    margin-right: 40%;
+    font-size: 0.8rem; 
+}
+
+/* Media Query */
+
+@media (max-width: 800px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        /* make this percentage of body for window consistency */
+    }
+
+    .section.top {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        align-content: center;
+        
+    }
+
+    .section.top .logo {
+        order: 0;
+        align-self: center; 
+        margin: 0% 2%;
+    }
+
+    .section.whoweare h2 {
+        font-size: 2rem;
+        text-align: center; 
+    }
+
+    .section.top nav {
+        order: 1;
+        align-self: center;
+    }
+
+    .section.top nav ul {
+        align-items: stretch;
+        align-content: space-around;
+    }
+    .section.top nav ul li {
+        padding: 0% 1%;
+    }
+
+    .section.main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section.main .item.main { 
+        margin: 0.5%;
+    }
+
+    .section.main .item.main.text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column; 
+        align-items: center;
+        align-self: center; 
+        text-align: center;  
+    }
+
+    .section.main .item.main.mainimage {
+        display: none; 
+        width: 0px;
+        height: 0px;
+    }
+
+    .section.main .item.main img {
+        width: 0%;
+        margin: 1.5%;
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .section.top nav ul {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: stretch;
+        align-items: stretch;
+    }
+
+    .section.top nav ul li {
+        
+        padding: 3% 100%;
+        width: 100%; 
+        align-self: center; 
+
+        border: 1px solid black;
+    }
+
+    .section.main .item.main .text {
+        width: 100%;
+        align-self: center;
+    }
+
+    .section.main .item.main img {
+        display: none;
+        width: 0%; 
+    }
+
+    .section.description {
+        display: flex; 
+        flex-direction: column; 
+        flex-wrap: wrap;
+    }
+
+    .section.description .item.mainpage.row1 {
+        width: 100%;
+    }
+    
+    .section.description .item.mainpage.row2 {
+        width: 100%;
+    }
+
+}
